@@ -40,6 +40,22 @@
 
 [프레젠테이션 및 컨테이너 구성 요소](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
 
+## Hooks Pattern
+
+React 16.8에 도입된 Hooks를 이용하여 재사용 가능한 로직을 작성하여 사용하는 방법이다.
+
+내가 작성한 예제는 `Presenter and Container` 패턴 또한 내부에서 hooks를 사용하였는데, 사실 hooks를 사용하지 않을 경우 클래스형 컴포넌트로 작성해야 한다.
+
+이는 Container 컴포넌트의 크기가 커질 수 있음을 의미한다.
+
+또한 클래스의 특징인 this 자동 바인딩으로 인한 문제에 직면할 수 있다.
+
+Hooks 패턴은 내부 상태를 추적하고 순수함수로 작성되어 위에서 언급한 클래스형 컴포넌트를 사용함으로 발생하는 `Presenter and Container`의 문제를 해결할 수 있다.
+
+### Ref
+
+[React component design patterns for 2022](https://blog.logrocket.com/react-component-design-patterns-2022/)
+
 ## Ref(할 예정)
 
 [advanced-react-patterns](https://github.com/alexis-regnaud/advanced-react-patterns)
