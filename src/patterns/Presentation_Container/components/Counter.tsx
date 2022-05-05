@@ -1,5 +1,5 @@
 import { CounterContentWrapper } from "../../../styles";
-import CounterType from "../type/counter";
+import CounterType from "../../../type/counter";
 export default function Counter({
   count,
   handleIncrement,
