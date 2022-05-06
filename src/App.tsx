@@ -1,3 +1,4 @@
+import { ControlProps } from "./patterns/Control-Props/Usage";
 import Hooks from "./patterns/Hooks/Usage";
 import ContainerPresentation from "./patterns/Presentation_Container/Usage";
 import { PatternWrapper } from "./styles";
@@ -10,6 +11,9 @@ function App() {
       </div>
       <div className={PatternWrapper}>
         <Hooks />
+      </div>
+      <div className={PatternWrapper}>
+        <ControlProps />
       </div>
     </>
   );

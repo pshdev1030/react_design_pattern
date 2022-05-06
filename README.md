@@ -56,6 +56,30 @@ Hooks 패턴은 내부 상태를 추적하고 순수함수로 작성되어 위�
 
 [React component design patterns for 2022](https://blog.logrocket.com/react-component-design-patterns-2022/)
 
+## Control Props Pattern
+
+`Control Props Pattern`은 컴포넌트를 [제어 컴포넌트](https://ko.reactjs.org/docs/forms.html#controlled-components)로 작성한다.
+
+또한 외부 state는 사용자가 컴포넌트의 기본 동작을 변경한 `사용자 지정 로직`을 삽입할 수 있도록 하는 SSOT(single source of truth)로 사용된다.
+
+SSOT는 모든 데이터와 컴포넌트의 동작을 한 곳에서만 제어할 수 있도록 하는 것이다.
+
+제어 컴포넌트는 사용자 입력을 기반으로 자신의 state를 관리하고 업데이트 하는 컴포넌트이다.
+
+### 장점
+
+컴포넌트 외부에 state가 노출되기 때문에 컴포넌트를 제어할 수 있다. 또한 다양한 커스텀 로직을 작성하여 컴포넌트를 재사용할 수 있다.
+
+### 한계
+
+JSX에서만 구현해도 되었지만 이 패턴은 JSX/useState/handleChange와 같이 다른 위치에서의 구현이 필요하다. 즉 구현이 복잡하다.
+
+### Ref
+
+[5 Advanced React Patterns](https://javascript.plainenglish.io/5-advanced-react-patterns-a6b7624267a6)
+[제어 컴포넌트 (Controlled Component)](https://ko.reactjs.org/docs/forms.html#controlled-components)
+[비제어 컴포넌트](https://ko.reactjs.org/docs/uncontrolled-components.html)
+
 ## Ref(할 예정)
 
 [advanced-react-patterns](https://github.com/alexis-regnaud/advanced-react-patterns)
@@ -67,3 +91,7 @@ Hooks 패턴은 내부 상태를 추적하고 순수함수로 작성되어 위�
 [React Design Pattern](https://www.youtube.com/playlist?list=PLEtjGa9VEukOfsH6OSC0VBNbOPiyfOsw0)
 
 [\[번역\] React에서 BLoC 패턴 사용하기](https://github.com/sbyeol3/articles/issues/15)
+
+[3 React Component Design Patterns You Should Know About](https://blog.openreplay.com/3-react-component-design-patterns-you-should-know-about)
+
+[React component design patterns for 2022](https://blog.logrocket.com/react-component-design-patterns-2022/)
