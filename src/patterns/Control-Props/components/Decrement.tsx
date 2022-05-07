@@ -1,6 +1,6 @@
 import { useCounterContext } from "../useCounterContext";
 
-const Decrement = ({ icon = "-" }: { icon: string }) => {
+const Decrement = ({ icon = "-" }: { icon?: string }) => {
   const { handleDecrement } = useCounterContext();
   return (
     <button className="button" onClick={handleDecrement}>
