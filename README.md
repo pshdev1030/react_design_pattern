@@ -74,6 +74,50 @@ SSOT는 모든 데이터와 컴포넌트의 동작을 한 곳에서만 제어할
 
 JSX에서만 구현해도 되었지만 이 패턴은 JSX/useState/handleChange와 같이 다른 위치에서의 구현이 필요하다. 즉 구현이 복잡하다.
 
+## Props Getters Pattern
+
+Hooks pattern의 경우 로직과 UI를 성공적으로 분리했지만 컴포넌트에서 사용할 로직을 재정의하고 통합하려면 새로 정의해야한다.
+
+Props Getters 패턴은 이러한 복잡성을 숨긴다. Props를 제공하는 대신에 Props의 후보를 제공한다.
+
+Props Getters Pattern으로 작성한 Counter의 경우 getIncrement의 onClick은 count를 1 증가시키는 함수지만 콜백함수를 받아 로직을 재정의할 수 있게 한다.
+
+```js
+const callFnsInsquence =
+  (...fns: any[]) =>
+  (...args: any[]) =>
+    fns.forEach((fn) => fn && fn(...args));
+
+const getIncrementProps = ({
+  onClick,
+  ...otherProps
+}: {
+  onClick?: () => void | undefined,
+  otherProps?: any[],
+} = {}) => ({
+  onClick: callFnsInsquence(handleIncrement, onClick),
+  ...otherProps,
+});
+```
+
+### 장점
+
+부모 컴포넌트와 자식 컴포넌트를 통합하는 쉬운 방법을 제공하고 복잡한 구현은 숨겨져있다. 부모의 Props를 Getter를 통해 가져오고 올바른 JSX에 그대로 연결만 하면 된다. 즉 또한 Props라는 객체를 통해 자식에서 부모로 값을 전달할 수 있다.
+
+즉 부모에서 자식, 자식에서 부모로의 양방향 커뮤니케이션이 가능하며, 유연하게 결합할 수 있다.
+
+또한 오버로드를 이용하여 유연하게 커스텀 로직을 정의할 수 있다.
+
+### 단점
+
+가시성 부족: 추상화를 이용하여 컴포넌트를 더 쉽게 통합할 수 있지만 추상화로 인해 가시성은 조금 떨어진다.
+
+컴포넌트를 재정의하기 위해선 getters와 getters중 하나가 변경될 경우 내부 로직에 끼칠 영향을 알아야 한다.
+
+### Ref
+
+[[React Design Pattern] Props Getter Pattern](https://simsimjae.medium.com/react-design-pattern-props-getter-pattern-5d3cf6f0b495)
+
 ### Ref
 
 [5 Advanced React Patterns](https://javascript.plainenglish.io/5-advanced-react-patterns-a6b7624267a6)
