@@ -118,6 +118,26 @@ const getIncrementProps = ({
 
 [[React Design Pattern] Props Getter Pattern](https://simsimjae.medium.com/react-design-pattern-props-getter-pattern-5d3cf6f0b495)
 
+## State Reducer Pattern
+
+useReducer를 사용하고 redux처럼 state와 reducer를 정의한다.
+
+reducer의 경우 컴포넌트 action.type과 switch문으로 분기하여 내부에서 재정의할 수 있다.
+
+Hooks Pattern과 유사하다. 하지만 reducer를 별도로 정의하는 것이 특징이다.
+
+개인적으로 이 패턴이 제일 좋았다. 코드의 양은 많지만! 로직을 재정의하기도 쉽고 UI와 로직의 분리도 잘 되어있다.
+
+### 장점
+
+커스텀로직의 재정의가 쉽다. action.type에 따라 분기하기 때문에 해당 type에 대한 reducer만 컴포넌트 내부에서 별도로 작성해주면 된다.
+
+코드가 엄청 깔끔하다.
+
+### 단점
+
+구현이 복잡하다. useReducer를 이용하여 state와 reducer를 작성해야하고, custom hook까지 작성해야한다.
+
 ### Ref
 
 [5 Advanced React Patterns](https://javascript.plainenglish.io/5-advanced-react-patterns-a6b7624267a6)
