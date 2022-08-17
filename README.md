@@ -2,6 +2,8 @@
 
 리액트 디자인 패턴 연습을 위한 레포지토리입니다.
 
+해당 레포지토리에는 antd에서 사용중인 compound pattern을 적용한 컴포넌트가 사용되었습니다.
+
 ## Presenter and Container
 
 로직과 UI를 Container와 Presenter로 나누어 작성하는 패턴이다.
@@ -145,6 +147,10 @@ Hooks Pattern과 유사하다. 하지만 reducer를 별도로 정의하는 것�
 [비제어 컴포넌트](https://ko.reactjs.org/docs/uncontrolled-components.html)
 
 ## Ref(할 예정)
+
+[합성 컴포넌트로 재사용성 극대화하기](https://fe-developers.kakaoent.com/2022/220731-composition-component/)
+
+[리액트 디자인패턴 : Compound Components (컴파운드 컴포넌트 패턴)](https://itchallenger.tistory.com/m/266)
 
 [advanced-react-patterns](https://github.com/alexis-regnaud/advanced-react-patterns)
 
