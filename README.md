@@ -4,6 +4,8 @@
 
 해당 레포지토리에는 antd에서 사용중인 compound pattern을 적용한 컴포넌트가 사용되었습니다.
 
+향후 디자인 시스템을 구축할 때 antd과 mui를 참고할 예정입니다.
+
 ## Presenter and Container
 
 로직과 UI를 Container와 Presenter로 나누어 작성하는 패턴이다.
